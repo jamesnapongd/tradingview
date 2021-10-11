@@ -95,3 +95,28 @@ plotSig2lv = input(
   (minval = 0),
   (maxval = 1)
 );
+
+//**********************************//
+// 3commas
+symbol = '"' + syminfo.currency + '_' + syminfo.basecurrency + '"';
+bot_id = 'XXXXXX';
+email_token = 'XXXXXXXXX';
+
+buytext =
+  '{"message_type": "bot", "bot_id":' +
+  bot_id +
+  ', "email_token": ' +
+  email_token +
+  ', "delay_seconds": 0, "pair": ' +
+  symbol +
+  '}';
+selltext =
+  '{"action": "close_at_market_price", "message_type": "bot", "bot_id": ' +
+  bot_id +
+  ', "email_token": ' +
+  email_token +
+  ', "delay_seconds": 0, "pair": ' +
+  symbol +
+  '}';
+
+//*************************************//
