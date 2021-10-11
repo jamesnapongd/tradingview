@@ -120,3 +120,34 @@ selltext =
   '}';
 
 //*************************************//
+//****************************************************************************//
+//Calculate Indicators
+
+xPrice = ema(xsrc, xsmooth);
+FastMA = xfixtf
+  ? ema(
+      security(
+        syminfo.tickerid,
+        xtf,
+        ema(xsrc, xprd1),
+        (gaps = barmerge.gaps_off),
+        (lookahead = barmerge.lookahead_on)
+      ),
+      xsmooth
+    )
+  : ema(xPrice, xprd1);
+SlowMA = xfixtf
+  ? ema(
+      security(
+        syminfo.tickerid,
+        xtf,
+        ema(xsrc, xprd2),
+        (gaps = barmerge.gaps_off),
+        (lookahead = barmerge.lookahead_on)
+      ),
+      xsmooth
+    )
+  : ema(xPrice, xprd2);
+
+Bull = FastMA > SlowMA;
+Bear = FastMA < SlowMA;
