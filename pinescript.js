@@ -163,3 +163,15 @@ Orange = Bull and xPrice < FastMA and xPrice < SlowMA // Pre Sell 2
 Yellow = Bull and xPrice < FastMA and xPrice > SlowMA // Pre Sell 1
 
 //****************************************************************************//
+// Display color on chart
+
+bColor = Green ? color.green : 
+     Blue ? color.blue : 
+     LBlue ? color.aqua : 
+     Red ? color.red : 
+     Orange ? color.orange : 
+     Yellow ? color.yellow : 
+     color.black
+barcolor(color=fillSW? bColor : na)
+
+//****************************************************************************//
