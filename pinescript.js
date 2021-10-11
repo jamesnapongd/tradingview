@@ -151,3 +151,15 @@ SlowMA = xfixtf
 
 Bull = FastMA > SlowMA;
 Bear = FastMA < SlowMA;
+//****************************************************************************//
+// Define Color Zones
+
+Green = Bull and xPrice>FastMA // Buy
+Blue = Bear and xPrice>FastMA and xPrice>SlowMA //Pre Buy 2
+LBlue = Bear and xPrice>FastMA and xPrice<SlowMA //Pre Buy 1
+
+Red = Bear and xPrice < FastMA // Sell
+Orange = Bull and xPrice < FastMA and xPrice < SlowMA // Pre Sell 2
+Yellow = Bull and xPrice < FastMA and xPrice > SlowMA // Pre Sell 1
+
+//****************************************************************************//
