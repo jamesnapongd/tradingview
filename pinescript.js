@@ -175,3 +175,26 @@ bColor = Green ? color.green :
 barcolor(color=fillSW? bColor : na)
 
 //****************************************************************************//
+
+//****************************************************************************//
+
+Green = Bull and xPrice<FastMA // Buy
+Blue = Bear and xPrice>FastMA and xPrice>SlowMA //
+LBlue = Bear and xPrice<FastMA and xPrice<SlowMA //
+
+Red = Bear and xPrice < FastMA // Sell
+Orange = Bull and xPrice > FastMA and xPrice > SlowMA // 
+Yellow = Bull and xPrice < FastMA and xPrice > SlowMA // 
+
+//****************************************************************************//
+
+bColor = Green ? color.green : 
+     Blue ? color.blue : 
+     LBlue ? color.aqua : 
+     Red ? color.red : 
+     Orange ? color.orange : 
+     Yellow ? color.yellow : 
+     color.black
+barcolor(color=fillSW? bColor : na)
+
+//****************************************************************************//
