@@ -188,13 +188,3 @@ Yellow = Bull and xPrice < FastMA and xPrice > SlowMA //
 
 //****************************************************************************//
 
-bColor = Green ? color.green : 
-     Blue ? color.blue : 
-     LBlue ? color.aqua : 
-     Red ? color.red : 
-     Orange ? color.orange : 
-     Yellow ? color.yellow : 
-     color.black
-barcolor(color=fillSW? bColor : na)
-
-//****************************************************************************//
