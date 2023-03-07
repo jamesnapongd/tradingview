@@ -99,6 +99,8 @@ plotSig2lv = input(
 //**********************************//
 // 3commas
 symbol = '"' + syminfo.currency + '_' + syminfo.basecurrency + '"';
+
+//******************************************************************** EDIT bot_id and email_token ********************************************************************//
 bot_id = 'XXXXXX';
 email_token = 'XXXXXXXXX';
 
